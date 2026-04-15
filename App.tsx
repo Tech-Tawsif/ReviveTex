@@ -1,25 +1,24 @@
 import React, { useState, useMemo, useEffect } from 'react';
-import Auth from './components/Auth';
-import type { Product, CartItem, BusinessProfile } from './types';
-import Header from './components/Header';
-import ProductCard from './components/ProductCard';
-import ProductModal from './components/ProductModal';
-import CartSidebar from './components/CartSidebar';
-import Checkout from './components/Checkout';
-import Footer from './components/Footer';
-import { Logo } from './components/icons/Logo';
-import About from './components/About';
-import AdminApp from './components/admin/AdminApp';
-import OrderConfirmationModal from './components/OrderConfirmationModal';
-import { Spinner } from './components/icons/Spinner';
+import BusinessAuthFlow from '@/app_components/BusinessAuthFlow';
+import type { Product, CartItem, BusinessProfile, View } from './types';
+import Header from '@/app_components/Header';
+import ProductCard from '@/app_components/ProductCard';
+import ProductModal from '@/app_components/ProductModal';
+import CartSidebar from '@/app_components/CartSidebar';
+import Checkout from '@/app_components/Checkout';
+import Footer from '@/app_components/Footer';
+import { Logo } from '@/app_components/icons/Logo';
+import About from '@/app_components/About';
+import AdminApp from '@/app_components/admin/AdminApp';
+import OrderConfirmationModal from '@/app_components/OrderConfirmationModal';
+import { Spinner } from '@/app_components/icons/Spinner';
 import * as SupabaseService from './supabaseService';
-import PaymentStatusPage from './components/PaymentStatusPage';
+import PaymentStatusPage from '@/app_components/PaymentStatusPage';
 import { supabase, initError, isDemoMode } from './supabaseClient';
 
 
-import BusinessProfileView from './components/BusinessProfileView';
+import BusinessProfileView from '@/app_components/BusinessProfileView';
 
-export type View = 'products' | 'checkout' | 'about' | 'payment-status' | 'business-auth' | 'business-profile';
 
 function App() {
   const [products, setProducts] = useState<Product[]>([]);
@@ -286,7 +285,7 @@ function App() {
         return <About />;
       case 'business-auth':
         return (
-          <Auth 
+          <BusinessAuthFlow 
             onAuthSuccess={async () => {
               await refreshAuth();
               setCurrentView('products');

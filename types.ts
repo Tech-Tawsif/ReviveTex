@@ -43,3 +43,5 @@ export interface NewOrderResponse {
     id: number;
     subtotal: number;
 }
+
+export type View = 'products' | 'checkout' | 'about' | 'payment-status' | 'business-auth' | 'business-profile';
