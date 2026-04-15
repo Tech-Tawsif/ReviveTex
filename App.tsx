@@ -1,5 +1,5 @@
 import React, { useState, useMemo, useEffect } from 'react';
-import BusinessAuthentication from './components/BusinessAuthentication';
+import Auth from './components/Auth';
 import type { Product, CartItem, BusinessProfile } from './types';
 import Header from './components/Header';
 import ProductCard from './components/ProductCard';
@@ -286,7 +286,7 @@ function App() {
         return <About />;
       case 'business-auth':
         return (
-          <BusinessAuthentication 
+          <Auth 
             onAuthSuccess={async () => {
               await refreshAuth();
               setCurrentView('products');
