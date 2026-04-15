@@ -26,6 +26,6 @@
     "allowImportingTsExtensions": true,
     "noEmit": true
   },
-  "include": ["src", "App.tsx", "main.tsx", "types.ts", "supabaseClient.ts", "supabaseService.ts", "constants.ts", "components"],
+  "include": ["index.tsx", "App.tsx", "types.ts", "supabaseClient.ts", "supabaseService.ts", "constants.ts", "components"],
   "exclude": ["node_modules", "supabase/functions"]
 }
