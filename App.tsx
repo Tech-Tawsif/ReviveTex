@@ -1,23 +1,23 @@
 import React, { useState, useMemo, useEffect } from 'react';
-import BusinessAuthFlow from '@/app_components/BusinessAuthFlow';
-import type { Product, CartItem, BusinessProfile, View } from './types';
-import Header from '@/app_components/Header';
-import ProductCard from '@/app_components/ProductCard';
-import ProductModal from '@/app_components/ProductModal';
-import CartSidebar from '@/app_components/CartSidebar';
-import Checkout from '@/app_components/Checkout';
-import Footer from '@/app_components/Footer';
-import { Logo } from '@/app_components/icons/Logo';
-import About from '@/app_components/About';
-import AdminApp from '@/app_components/admin/AdminApp';
-import OrderConfirmationModal from '@/app_components/OrderConfirmationModal';
-import { Spinner } from '@/app_components/icons/Spinner';
-import * as SupabaseService from './supabaseService';
-import PaymentStatusPage from '@/app_components/PaymentStatusPage';
-import { supabase, initError, isDemoMode } from './supabaseClient';
+import BusinessAuthFlow from './app_components/BusinessAuthFlow.tsx';
+import type { Product, CartItem, BusinessProfile, View } from './types.ts';
+import Header from './app_components/Header.tsx';
+import ProductCard from './app_components/ProductCard.tsx';
+import ProductModal from './app_components/ProductModal.tsx';
+import CartSidebar from './app_components/CartSidebar.tsx';
+import Checkout from './app_components/Checkout.tsx';
+import Footer from './app_components/Footer.tsx';
+import { Logo } from './app_components/icons/Logo.tsx';
+import About from './app_components/About.tsx';
+import AdminApp from './app_components/admin/AdminApp.tsx';
+import OrderConfirmationModal from './app_components/OrderConfirmationModal.tsx';
+import { Spinner } from './app_components/icons/Spinner.tsx';
+import * as SupabaseService from './supabaseService.ts';
+import PaymentStatusPage from './app_components/PaymentStatusPage.tsx';
+import { supabase, initError, isDemoMode } from './supabaseClient.ts';
 
 
-import BusinessProfileView from '@/app_components/BusinessProfileView';
+import BusinessProfileView from './app_components/BusinessProfileView.tsx';
 
 
 function App() {

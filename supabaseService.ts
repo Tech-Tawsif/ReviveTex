@@ -1,5 +1,5 @@
-import { supabase, initError } from './supabaseClient';
-import type { Product, CartItem, Order, NewOrderResponse, BusinessProfile } from './types';
+import { supabase, initError } from './supabaseClient.ts';
+import type { Product, CartItem, Order, NewOrderResponse, BusinessProfile } from './types.ts';
 
 const checkSupabase = () => {
     if (initError) throw new Error(`Supabase initialization error: ${initError}`);

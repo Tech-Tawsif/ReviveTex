@@ -2,7 +2,7 @@
 import { createClient } from '@supabase/supabase-js';
 
 // IMPORTANT: Replace with your project's URL and Anon Key from your Supabase dashboard.
-import { createMockSupabase } from './supabaseMock';
+import { createMockSupabase } from './supabaseMock.ts';
 
 const supabaseUrl = import.meta.env.VITE_SUPABASE_URL || '';
 const supabaseAnonKey = import.meta.env.VITE_SUPABASE_ANON_KEY || '';
