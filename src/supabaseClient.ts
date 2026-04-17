@@ -4,8 +4,8 @@ import { createClient } from '@supabase/supabase-js';
 // IMPORTANT: Replace with your project's URL and Anon Key from your Supabase dashboard.
 import { createMockSupabase } from './supabaseMock';
 
-const supabaseUrl = import.meta.env.VITE_SUPABASE_URL || '';
-const supabaseAnonKey = import.meta.env.VITE_SUPABASE_ANON_KEY || '';
+const supabaseUrl = import.meta.env.NEXT_PUBLIC_SUPABASE_URL || '';
+const supabaseAnonKey = import.meta.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || '';
 
 let supabase: any = null;
 let initError: string | null = null;
